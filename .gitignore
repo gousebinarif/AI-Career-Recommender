@@ -1,0 +1,25 @@
+# Environment folders
+venv/
+Baba/
+__pycache__/
+.env
+
+# Binary files
+*.pyd
+*.dll
+*.so
+*.exe
+*.zip
+*.tar
+*.gz
+*.h5
+*.pkl
+
+# Data
+*.csv
+*.db
+
+# IDE and system files
+.DS_Store
+Thumbs.db
+"*.pyd" 

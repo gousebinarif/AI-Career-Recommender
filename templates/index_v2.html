@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_v2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1 class="title">AI Career Recommender</h1>
+            <form id="career-form">
+                <label>Skills:</label>
+                <input type="text" name="skills" placeholder="e.g. Python, Data Analysis" required>
+                <label>Interests:</label>
+                <input type="text" name="interests" placeholder="e.g. AI, Web Development" required>
+                <label>Aptitude Score:</label>
+                <input type="number" name="aptitude" placeholder="0-100" required>
+                <button type="submit" id="submit-btn">Get Recommendations</button>
+            </form>
+            <div id="loading-spinner" class="spinner hidden"></div>
+        </div>
+        <div class="results-section">
+            <h2>Recommended Careers</h2>
+            <div id="results"></div>
+            <canvas id="resultChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script_v2.js') }}"></script>
+</body>
+</html>
